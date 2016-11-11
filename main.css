@@ -1,0 +1,93 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+body {
+  background-color: #d9dbdd; }
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #233237;
+  border-radius: 10px; }
+  .container .header h1 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 70px;
+    color: #984B43;
+    padding: 20px;
+    display: inline; }
+  .container .header h1:hover {
+    opacity: 0.8; }
+  .container .header .circles {
+    float: right;
+    padding: 20px; }
+    .container .header .circles .online-circle {
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 5px;
+      width: 50px;
+      height: 50px;
+      background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #5ca579 0%, #2e533d 100%);
+      background-image: -webkit-radial-gradient(45px 45px, circle cover, #5ca579, #2e533d);
+      background-image: radial-gradient(45px 45px 45deg, circle cover, #5ca579 0%, #2e533d 100%); }
+      .container .header .circles .online-circle p {
+        text-align: center;
+        color: #233237; }
+    .container .header .circles .online-circle:hover {
+      width: 52px;
+      height: 52px; }
+    .container .header .circles .offline-circle {
+      display: inline-block;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+      background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+      background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%); }
+      .container .header .circles .offline-circle p {
+        text-align: center;
+        color: #233237; }
+    .container .header .circles .offline-circle:hover {
+      width: 52px;
+      height: 52px; }
+  .container .channel h3 {
+    color: #EAC67A;
+    display: inline-block;
+    margin-left: 50px; }
+  .container .channel .online-circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    margin-bottom: -5px;
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #5ca579 0%, #2e533d 100%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, #5ca579, #2e533d);
+    background-image: radial-gradient(45px 45px 45deg, circle cover, #5ca579 0%, #2e533d 100%);
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .container .channel .offline-circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    margin-bottom: -5px;
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+    background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .container .channel p {
+    display: inline-block;
+    float: right;
+    color: #EAC67A;
+    margin-right: 20px;
+    margin-top: 20px; }
+
+/*# sourceMappingURL=main.css.map */

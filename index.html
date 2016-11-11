@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>twitch list</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"  /> <!-- -->
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Six+Caps" rel="stylesheet">
+  <script src="js/libs/angular.js"></script>
+</head>
+<body>
+  <div class="container" ng-controller="ListController as list">
+    <div class="header">
+      <h1>Twitch List</h1>
+      <div class="circles">
+        <div class="online-circle">
+          <p>online</p>
+        </div>
+        <div class="offline-circle">
+          <p>offline</p>
+        </div>
+      </div>
+    </div>
+    <div class="channel">
+      <h3>{{ list.fullResponse }}</h3>
+      <div class="online-circle"></div>
+      <div class="offline-circle"></div>
+      <p>{{channel.stream}}</p>
+      <!-- <p>[channel does not exist or has been disabled]</p> -->
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/list.controller.js"></script>
+  <script src="js/list.service.js"></script>
+</body>
+</html>

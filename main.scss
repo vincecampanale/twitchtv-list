@@ -1,0 +1,123 @@
+$bg-color: #d9dbdd; //Light Grey
+$primary-color: #18121E; //Navy Blue
+$secondary-color: #233237; //Gun Metal
+$text-color: #984B43; //Rusty Red
+$accent-color: #EAC67A; //Warm Yellow
+$online-color: #5ca579;
+$online-gradient: $online-color * 0.5;
+$font-family: 'Six Caps', sans-serif;
+
+@keyframes spin {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+
+body {
+  background-color: $bg-color;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: $secondary-color;
+  border-radius: 10px;
+
+  .header {
+    h1 {
+      font-family: $font-family;
+      font-size: 70px;
+      color: $text-color;
+      padding: 20px;
+      display: inline;
+    }
+    h1:hover{
+      opacity: 0.8;
+    }
+    .circles {
+      float: right;
+      padding: 20px;
+      .online-circle {
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 5px;
+        width: 50px;
+        height: 50px;
+        background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, $online-color 0%, $online-gradient 100%);
+        background-image: -webkit-radial-gradient(45px 45px, circle cover, $online-color, $online-gradient);
+        background-image: radial-gradient(45px 45px 45deg, circle cover, $online-color 0%, $online-gradient 100%);
+        p{
+          text-align: center;
+          color: $secondary-color;
+        }
+      }
+      .online-circle:hover{
+          width: 52px;
+          height: 52px;
+      }
+      .offline-circle {
+        display: inline-block;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+        background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+        background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+        p{
+          text-align: center;
+          color: $secondary-color;
+        }
+      }
+      .offline-circle:hover{
+          width: 52px;
+          height: 52px;
+      }
+    }
+  }
+  .channel {
+    h3 {
+      color: $accent-color;
+      display: inline-block;
+      margin-left: 50px;
+    }
+    .online-circle {
+      display: inline-block;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      margin-left: 3px;
+      margin-bottom: -5px;
+      background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, $online-color 0%, $online-gradient 100%);
+      background-image: -webkit-radial-gradient(45px 45px, circle cover, $online-color, $online-gradient);
+      background-image: radial-gradient(45px 45px 45deg, circle cover, $online-color 0%, $online-gradient 100%);
+      animation-name: spin;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .offline-circle {
+      display: inline-block;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      margin-left: 3px;
+      margin-bottom: -5px;
+      background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+      background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+      background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+      animation-name: spin;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    p{
+      display: inline-block;
+      float:right;
+      color: $accent-color;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+  }
+
+
+
+}
