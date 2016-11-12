@@ -31,3 +31,10 @@ function makeURL(user){
   var API = base + userPart;
   return API;
 }
+
+function loadData(sUrl, timeout, callback){
+
+  var args = arguments.slice(3);
+  var xhr = new XMLHttpRequest();
+
+}
