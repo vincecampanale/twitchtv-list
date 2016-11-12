@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 <head>
   <meta charset="utf-8">
   <title>twitch list</title>
@@ -9,7 +9,7 @@
   <script src="js/libs/angular.js"></script>
 </head>
 <body>
-  <div class="container" ng-controller="ListController as list">
+  <div class="container">
     <div class="header">
       <h1>Twitch List</h1>
       <div class="circles">
@@ -22,16 +22,16 @@
       </div>
     </div>
     <div class="channel">
-      <h3>{{ list.fullResponse }}</h3>
+      <h3> user </h3>
       <div class="online-circle"></div>
       <div class="offline-circle"></div>
-      <p>{{channel.stream}}</p>
+      <p>what they're streaming</p>
       <!-- <p>[channel does not exist or has been disabled]</p> -->
     </div>
   </div>
 
-  <script src="js/app.js"></script>
-  <script src="js/list.controller.js"></script>
-  <script src="js/list.service.js"></script>
+  <script src="js/script.js"></script>
+
+
 </body>
 </html>
