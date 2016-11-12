@@ -51,11 +51,11 @@ body {
     .container .header .circles .offline-circle:hover {
       width: 52px;
       height: 52px; }
-  .container .channel h3 {
+  .container #channel__list .channel h3 {
     color: #EAC67A;
     display: inline-block;
     margin-left: 50px; }
-  .container .channel .online-circle {
+  .container #channel__list .channel .online-circle {
     display: inline-block;
     border-radius: 50%;
     width: 20px;
@@ -69,7 +69,7 @@ body {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
-  .container .channel .offline-circle {
+  .container #channel__list .channel .offline-circle {
     display: inline-block;
     border-radius: 50%;
     width: 20px;
@@ -83,7 +83,7 @@ body {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
-  .container .channel p {
+  .container #channel__list .channel p {
     display: inline-block;
     float: right;
     color: #EAC67A;
