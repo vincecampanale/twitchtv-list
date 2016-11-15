@@ -10,15 +10,13 @@ body {
   width: 600px;
   margin: 0 auto;
   background-color: #233237;
-  border-radius: 10px; }
+  border-radius: 30px; }
   .container .header h1 {
     font-family: "Six Caps", sans-serif;
     font-size: 70px;
     color: #984B43;
     padding: 20px;
     display: inline; }
-  .container .header h1:hover {
-    opacity: 0.8; }
   .container .header .circles {
     float: right;
     padding: 20px; }
@@ -66,12 +64,18 @@ body {
     .container .header .circles .all-circle:hover {
       width: 52px;
       height: 52px; }
+  .container #channel__list .hide {
+    display: none; }
+  .container #channel__list .online {
+    background-color: #2e4148;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px; }
   .container #channel__list .channel a, .container #channel__list .channel h3 {
     color: #EAC67A;
     display: inline-block;
     margin-left: 25px;
     text-decoration: none !important; }
-  .container #channel__list .channel .online-circle {
+  .container #channel__list .channel .little-online-circle {
     display: inline-block;
     border-radius: 50%;
     width: 20px;
@@ -85,7 +89,7 @@ body {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
-  .container #channel__list .channel .offline-circle {
+  .container #channel__list .channel .little-offline-circle {
     display: inline-block;
     border-radius: 50%;
     width: 20px;
