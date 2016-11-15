@@ -51,6 +51,21 @@ body {
     .container .header .circles .offline-circle:hover {
       width: 52px;
       height: 52px; }
+    .container .header .circles .all-circle {
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 5px;
+      width: 50px;
+      height: 50px;
+      background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #984B43 0%, #4c2622 100%);
+      background-image: -webkit-radial-gradient(45px 45px, circle cover, #984B43, #4c2622);
+      background-image: radial-gradient(45px 45px 45deg, circle cover, #984B43 0%, #4c2622 100%); }
+      .container .header .circles .all-circle p {
+        text-align: center;
+        color: #233237; }
+    .container .header .circles .all-circle:hover {
+      width: 52px;
+      height: 52px; }
   .container #channel__list .channel a, .container #channel__list .channel h3 {
     color: #EAC67A;
     display: inline-block;

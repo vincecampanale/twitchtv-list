@@ -5,6 +5,8 @@ $text-color: #984B43; //Rusty Red
 $accent-color: #EAC67A; //Warm Yellow
 $online-color: #5ca579;
 $online-gradient: $online-color * 0.5;
+$all-color: #984B43;
+$all-gradient: $all-color * 0.5;
 $font-family: 'Six Caps', sans-serif;
 
 @keyframes spin {
@@ -71,6 +73,24 @@ body {
           width: 52px;
           height: 52px;
       }
+      .all-circle {
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 5px;
+        width: 50px;
+        height: 50px;
+        background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, $text-color 0%, $all-gradient 100%);
+        background-image: -webkit-radial-gradient(45px 45px, circle cover, $all-color, $all-gradient);
+        background-image: radial-gradient(45px 45px 45deg, circle cover, $all-color 0%, $all-gradient 100%);
+        p{
+          text-align: center;
+          color: $secondary-color;
+        }
+      }
+      .all-circle:hover{
+          width: 52px;
+          height: 52px;
+      }
     }
   }
   #channel__list {
@@ -120,7 +140,4 @@ body {
       }
     }
   }
-
-
-
 }
