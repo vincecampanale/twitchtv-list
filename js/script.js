@@ -1,26 +1,31 @@
-var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
-users.forEach(function(user){
-  loadData(makeUrl(user), 10000, processData);
+channels.forEach(function(channel){
+  loadData(makeUrl("channels", channel), 30000, processData);
+  //loadData(makeURL("streams", channel), 30000,processData);
 });
 
 
 //process data callback
 function processData(response){
   var obj = JSON.parse(this.response);
-  var new_div = document.createElement('div');
-  new_div.className = "channel";
-  new_div.innerHTML = '<h3>' + obj.display_name + '</h3>';
 
-  document.getElementById('channel__list').appendChild(new_div);
+  if(obj.hasOwnProperty('display_name')){
+    var channel_div = document.createElement('div');
+    channel_div.className = "channel";
+    channel_div.id = obj.display_name;
+    channel_div.innerHTML = `
+    <h3><a href=` + obj.url + `>` + obj.display_name + `</a></h3>
+    `;
+    document.getElementById('channel__list').appendChild(channel_div);
+  }
   console.log(obj);
 }
 
 //build user endpoint
-function makeUrl(user){
-  var base = 'https://crossorigin.me/https://wind-bow.hyperdev.space/twitch-api';
-  var userPart = '/users/' + user;
-  var API = base + userPart;
+function makeUrl(type, name){
+  var API = 'https://crossorigin.me/https://wind-bow.hyperdev.space/twitch-api/' +
+  type + '/' + name;
   return API;
 }
 

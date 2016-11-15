@@ -51,10 +51,11 @@ body {
     .container .header .circles .offline-circle:hover {
       width: 52px;
       height: 52px; }
-  .container #channel__list .channel h3 {
+  .container #channel__list .channel a, .container #channel__list .channel h3 {
     color: #EAC67A;
     display: inline-block;
-    margin-left: 50px; }
+    margin-left: 25px;
+    text-decoration: none !important; }
   .container #channel__list .channel .online-circle {
     display: inline-block;
     border-radius: 50%;

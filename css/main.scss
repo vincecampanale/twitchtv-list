@@ -75,10 +75,11 @@ body {
   }
   #channel__list {
     .channel {
-      h3 {
+      a, h3 {
         color: $accent-color;
         display: inline-block;
-        margin-left: 50px;
+        margin-left: 25px;
+        text-decoration: none !important;
       }
       .online-circle {
         display: inline-block;
