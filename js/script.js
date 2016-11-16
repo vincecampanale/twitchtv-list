@@ -8,16 +8,19 @@ function loadPage(){
     }).done(function(data){
       channelData.push(data.display_name); //channelData[0] contains the name of the channel
       channelData.push(data.url); //channelData[1] contains the link to their channel
-      //nested ajax request to get streaming data
+
+      //when first ajax request (for channel data) is done, make second ajax request to get stream data
       $.ajax({
         url: makeUrl("streams", channel)
       }).done(function(data){
         var channel_div = document.createElement('div');
         channel_div.className = "channel";
+        //if they're offline
         if(data.stream === null){
           channelData.push("Channel is offline"); //channelData[2] contains "Channel is offline"
           channel_div.className += " offline little-offline-circle";
         }
+        //if they're online
         if(data.stream !== null){
           var status = data.stream.channel.status;
           if(status.length > 40){
@@ -28,14 +31,17 @@ function loadPage(){
           }
           channel_div.className += " online little-online-circle";
         }
+        //load data into DOM
         channel_div.innerHTML = `
             <h3><a href=` + channelData[1] + `>` + channelData[0] + `</a></h3>\n
             <p>` + channelData[2] + `</p>
           `;
         document.getElementById('channel__list').appendChild(channel_div);
       });
+
     });
   });
+
   //build endpoint
   function makeUrl(type, name){
     var API = 'https://crossorigin.me/https://wind-bow.hyperdev.space/twitch-api/' +
