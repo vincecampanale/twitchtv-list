@@ -1,3 +1,4 @@
+//separated ajax and data processing logic to avoid polluting global scope
 function loadPage(){
   var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
   channels.forEach(function(channel){
@@ -35,37 +36,37 @@ function loadPage(){
       });
     });
   });
-
-
-  $(".online-circle").click(function(){
-    $(".offline").addClass('hide');
-    if($(".online").hasClass('hide')){
-      $(".online").removeClass('hide');
-    }
-  });
-
-  $(".offline-circle").click(function(){
-    $(".online").addClass('hide');
-    if($(".offline").hasClass('hide')){
-      $(".offline").removeClass('hide');
-    }
-  });
-  $(".all-circle").click(function(){
-    if($(".online").hasClass('hide')){
-      $(".online").removeClass('hide');
-    }
-    if($(".offline").hasClass('hide')){
-      $(".offline").removeClass('hide');
-    }
-  });
-
   //build endpoint
   function makeUrl(type, name){
     var API = 'https://crossorigin.me/https://wind-bow.hyperdev.space/twitch-api/' +
     type + '/' + name;
     return API;
   }
-
 }
 
 loadPage();
+
+
+//toggle buttons logic
+$(".online-circle").click(function(){
+  $(".offline").addClass('hide');
+  if($(".online").hasClass('hide')){
+    $(".online").removeClass('hide');
+  }
+});
+
+$(".offline-circle").click(function(){
+  $(".online").addClass('hide');
+  if($(".offline").hasClass('hide')){
+    $(".offline").removeClass('hide');
+  }
+});
+
+$(".all-circle").click(function(){
+  if($(".online").hasClass('hide')){
+    $(".online").removeClass('hide');
+  }
+  if($(".offline").hasClass('hide')){
+    $(".offline").removeClass('hide');
+  }
+});
